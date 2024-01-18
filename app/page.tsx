@@ -57,40 +57,32 @@ export default function Home() {
             </div>
             <div className='w-full flex justify-end'>
               <div className='social-media-link'>
-                <Link href={"https://github.com/ZeevHaydar"}>
-                  <div className='w-fit h-fit'>
-                    <FontAwesomeIcon icon={faSquareGithub} size='2x'
-                      color={isIconHovered && hoveredIcon === "github" ? 'blue' : 'white'}
-                      onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("github") }}
-                      onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
-                  </div>
+                <Link href={"https://github.com/ZeevHaydar"} target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faSquareGithub} size='2x'
+                    color={isIconHovered && hoveredIcon === "github" ? 'blue' : 'white'}
+                    onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("github") }}
+                    onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
-                <Link href={"https://www.instagram.com/nazhifhaidar/"}>
-                  <div className='w-fit h-fit'>
-                    <FontAwesomeIcon icon={faInstagram}
-                      size='2x'
-                      color={isIconHovered && hoveredIcon === "instagram" ? 'blue' : 'white'}
-                      onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("instagram") }}
-                      onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
-                  </div>
+                <Link href={"https://www.instagram.com/nazhifhaidar/"}  target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faInstagram}
+                    size='2x'
+                    color={isIconHovered && hoveredIcon === "instagram" ? 'blue' : 'white'}
+                    onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("instagram") }}
+                    onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
-                <Link href={"https://twitter.com/NazhifHaidar"}>
-                  <div className='w-fit h-fit'>
-                    <FontAwesomeIcon icon={faTwitter}
-                      size='2x'
-                      color={isIconHovered && hoveredIcon === "twitter" ? 'blue' : 'white'}
-                      onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("twitter") }}
-                      onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
-                  </div>
+                <Link href={"https://twitter.com/NazhifHaidar"}  target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faTwitter}
+                    size='2x'
+                    color={isIconHovered && hoveredIcon === "twitter" ? 'blue' : 'white'}
+                    onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("twitter") }}
+                    onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
-                <Link href={"https://www.linkedin.com/in/nazhif-haidar-putra-wibowo/"}>
-                  <div className='w-fit h-fit'>
-                    <FontAwesomeIcon icon={faLinkedin}
-                      size='2x'
-                      color={isIconHovered && hoveredIcon === "linkedin" ? 'blue' : 'white'}
-                      onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("linkedin") }}
-                      onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
-                  </div>
+                <Link href={"https://www.linkedin.com/in/nazhif-haidar-putra-wibowo/"}  target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faLinkedin}
+                    size='2x'
+                    color={isIconHovered && hoveredIcon === "linkedin" ? 'blue' : 'white'}
+                    onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("linkedin") }}
+                    onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
               </div>
             </div>
