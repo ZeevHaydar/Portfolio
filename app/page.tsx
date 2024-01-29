@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import { faHouse, faLaptop, faUser } from '@fortawesome/free-solid-svg-icons'
 import Tooltip from './Components/Tooltip'
+import NavigationMenu from './Components/NavigationMenu'
 
 
 const poppinsBold = Poppins({ subsets: ['latin'], weight: "700" });
@@ -52,35 +53,35 @@ export default function Home() {
             </div>
             <div className='description'>
               <h2 className='text-2xl pb-4 pr-3 pt-4 flex justify-end'>
-                I Am <span style={{ color: 'blue', paddingLeft: '6px', fontWeight: "bold" }}>Nazhif Haidar</span>
+                I Am <span style={{ color: '#4484eb', paddingLeft: '6px', fontWeight: "bold" }}>Nazhif Haidar</span>
               </h2>
             </div>
             <div className='w-full flex justify-end'>
               <div className='social-media-link'>
                 <Link href={"https://github.com/ZeevHaydar"} target='_blank' rel='noopener noreferrer'>
                   <FontAwesomeIcon icon={faSquareGithub} size='2x'
-                    color={isIconHovered && hoveredIcon === "github" ? 'blue' : 'white'}
+                    color={isIconHovered && hoveredIcon === "github" ? '#4484eb' : 'white'}
                     onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("github") }}
                     onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
                 <Link href={"https://www.instagram.com/nazhifhaidar/"}  target='_blank' rel='noopener noreferrer'>
                   <FontAwesomeIcon icon={faInstagram}
                     size='2x'
-                    color={isIconHovered && hoveredIcon === "instagram" ? 'blue' : 'white'}
+                    color={isIconHovered && hoveredIcon === "instagram" ? '#4484eb' : 'white'}
                     onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("instagram") }}
                     onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
                 <Link href={"https://twitter.com/NazhifHaidar"}  target='_blank' rel='noopener noreferrer'>
                   <FontAwesomeIcon icon={faTwitter}
                     size='2x'
-                    color={isIconHovered && hoveredIcon === "twitter" ? 'blue' : 'white'}
+                    color={isIconHovered && hoveredIcon === "twitter" ? '#4484eb' : 'white'}
                     onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("twitter") }}
                     onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
                 <Link href={"https://www.linkedin.com/in/nazhif-haidar-putra-wibowo/"}  target='_blank' rel='noopener noreferrer'>
                   <FontAwesomeIcon icon={faLinkedin}
                     size='2x'
-                    color={isIconHovered && hoveredIcon === "linkedin" ? 'blue' : 'white'}
+                    color={isIconHovered && hoveredIcon === "linkedin" ? '#4484eb' : 'white'}
                     onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("linkedin") }}
                     onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }} />
                 </Link>
@@ -90,7 +91,7 @@ export default function Home() {
           <div className='flex justify-end'>
             <div className='flex justify-between flex-col pr-[40px] h-[160px] w-fit'>
               <div className='flex justify-center'>
-                <Link href={"link-ke-CV"}>
+                <Link href={"https://drive.google.com/file/d/1pM4-ATqkMZ_0LdBuQXe6rIjlct11rAKH/view?usp=sharing"} target='_blank' rel='noopener noreferrer'>
                   <div className='cv-button'>
                     <h2>
                       Check CV
@@ -98,41 +99,7 @@ export default function Home() {
                   </div>
                 </Link>
               </div>
-
-              <div className='navigation-menu'>
-                <div className='rounded-3xl h-fit w-60 bg-slate-400/20 mb-8 py-2 px-4 flex justify-between' style={navigationStyle}>
-                  <Link href={"/"}>
-                    <Tooltip text={"Home"}>
-                      <FontAwesomeIcon icon={faHouse}
-                        size='2x'
-                        color={isIconHovered && hoveredIcon === "home" ? 'blue' : 'white'}
-                        onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("home") }}
-                        onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }}
-                      />
-                    </Tooltip>
-                  </Link>
-                  <Link href={"/about"}>
-                    <Tooltip text={"About"}>
-                      <FontAwesomeIcon icon={faUser}
-                        size='2x'
-                        color={isIconHovered && hoveredIcon === "about" ? 'blue' : 'white'}
-                        onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("about") }}
-                        onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }}
-                      />
-                    </Tooltip>
-                  </Link>
-                  <Link href={"/projects"}>
-                    <Tooltip text={"Projects"}>
-                      <FontAwesomeIcon icon={faLaptop}
-                        size='2x'
-                        color={isIconHovered && hoveredIcon === "projects" ? 'blue' : 'white'}
-                        onPointerEnter={() => { setIsIconHovered(true); setHoveredIcon("projects") }}
-                        onPointerLeave={() => { setIsIconHovered(false); setHoveredIcon("") }}
-                      />
-                    </Tooltip>
-                  </Link>
-                </div>
-              </div>
+              <NavigationMenu/>
             </div>
           </div>
 
