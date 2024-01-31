@@ -23,11 +23,11 @@ const InformationPage: React.FC<{ information: Information[] }> = ({ information
 
     return (
         <div className='information-page'>
-            <div className='information-container'>
+            <div className='information-container card bg-white/30'>
                 <Link href={information[currentPage].link} target="_blank" rel="noopener noreferrer">
                     <div className={`information-item`} style={{
-                        width: '560px',
-                        height: '315px'
+                        width: '528px',
+                        height: '297px',
                     }}>
                         <div className='image-container'>
                             <Image
@@ -35,6 +35,7 @@ const InformationPage: React.FC<{ information: Information[] }> = ({ information
                                 alt={information[currentPage].title}
                                 fill={true}
                                 objectFit='contain'
+                            
                             />
                         </div>
                         <div className='image-caption'>
@@ -53,8 +54,8 @@ const InformationPage: React.FC<{ information: Information[] }> = ({ information
                 ))}
             </div>
             <div className="navigation-arrows">
-                <button className='text-4xl' onClick={goToPrevPage}>&lt;</button>
-                <button className='text-4xl' onClick={goToNextPage}>&gt;</button>
+                <button className='navigation-arrow' onClick={goToPrevPage}><strong>&lt;</strong></button>
+                <button className='navigation-arrow' onClick={goToNextPage}><strong>&gt;</strong></button>
             </div>
 
         </div>

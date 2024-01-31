@@ -127,16 +127,28 @@ body {
 }
 
 .information-container {
-    padding-top: 20px;
+    margin-top: 20px;
+    width: 560px;
+    height: 315px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .information-item {
     position: relative;
     overflow: hidden;
+    background-color: #ffffff00;
+    transition: background-color 0.3 ease;
 }
 
 .information-item:hover .image-caption {
     opacity: 1;
+    
+}
+
+.information-item:hover {
+    background-color: #ffffff42;
 }
 
 .image-caption {
@@ -158,7 +170,20 @@ body {
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+    
 }
+
+.navigation-arrow {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .navigation-arrow:hover {
+    color: #4484eb;
+    transform: scale(1.6);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 60px;
+  }
 
 .dots {
     display: flex;
