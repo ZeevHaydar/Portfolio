@@ -176,6 +176,11 @@ body {
 .navigation-arrow {
     font-size: 2rem;
     color: white;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .navigation-arrow:hover {
