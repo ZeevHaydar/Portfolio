@@ -19,10 +19,6 @@ export default function Home() {
   const [isIconHovered, setIsIconHovered] = React.useState(false);
   const [hoveredIcon, setHoveredIcon] = React.useState<String>("");
 
-  const navigationStyle: React.CSSProperties = {
-    boxShadow: "3px 4px 15px rgba(248, 250, 252, 0.15)",
-  };
-
   const contentStyle: React.CSSProperties = {
     position: "absolute",
     zIndex: 1,
@@ -38,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <div className='screen h-full w-full'>
+    <div className='screen h-full w-full relative overflow-hidden'>
       <Background />
       <div className='content' style={contentStyle}>
         <div className='flex justify-end flex-col h-full pl-12'>
